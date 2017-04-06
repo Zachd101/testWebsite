@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+	<!-- Starting Head tag-->
+	<head>
+
+		<!-- Title tag -->
+		<title>∑∑∑∑∑∑</title>
+
+		<!-- Defining Colors and Fonts for Body using CSS-->
+		<style type="text/css">
+
+
+			@keyframes bg {
+
+				0% {background-color: lightblue;}
+				25% {background-color: pink;}
+				50% {background-color: purple;}
+				75% {background-color: blue;}
+				100%{background-color: grey;}
+			}
+
+			@keyframes rotate {
+
+				0% {	-ms-transform: rotate(0deg); /* IE 9 */ -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */ transform: rotate(0deg);}
+				100% {	-ms-transform: rotate(360deg); /* IE 9 */ -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */ transform: rotate(360deg);}
+			}
+
+			@keyframes move {
+
+				0% {-ms-transform: translate(0vw, 0vw); /* IE 9 */ -webkit-transform: translate(0px, 0px); /* Safari */ transform: translate(0px, 0px);}
+				50% {-ms-transform: translate(50vw, 50vw); /* IE 9 */ -webkit-transform: translate(50px, 50px); /* Safari */ transform: translate(50px, 50px);}
+				100% {-ms-transform: translate(0vw, 0vw); /* IE 9 */ -webkit-transform: translate(0px, 0px); /* Safari */ transform: translate(0px, 0px);}
+
+			}
+
+			@keyframes spinmove {
+
+				50% {transform: translate(100px, 0px); -webkit-transform: translate(100px, 0px); }
+
+
+			}
+
+			body {
+
+				color: black;
+				background-color: lightblue;
+				animation-name: bg;
+				animation-duration: 16s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+				font-weight: normal;
+				font-family: Tahoma, Geneva, sans-serif;
+				-webkit-transition-duration: 0.4s; /* Safari */
+   				transition-duration: 0.4s;
+
+			}
+			p {
+
+				word-spacing: 10px;
+				color: black;
+
+			}
+
+			#ram {
+				animation-name: move;
+   				animation-duration: 0.5s;
+   				animation-iteration-count: infinite;
+   				animation-timing-function: linear;
+
+
+			}
+
+
+   			#newImg:hover {
+   				animation-name: rotate;
+   				animation-timing-function:  linear;
+   				animation-duration: 1s;
+   				animation-iteration-count: infinite;
+
+   			}
+
+   			#record:hover {
+   				animation-name: rotate;
+   				animation-timing-function:  linear;
+   				animation-duration: 2s;
+   				animation-iteration-count: infinite;
+   			}
+
+
+
+			table, th, td {
+
+				border: 1px solid black;
+				border-collapse: collapse;
+
+			}
+
+			table {
+
+				width: 25%;
+			}
+
+			.button {
+   				background-color: white;
+ 			    border: 2px solid black;
+				color: white;
+   				padding: 3px 5px;
+   				text-align: center;
+   				text-decoration: none;
+			    display: inline-block;
+    			font-size: 16px;
+    			margin: 4px 2px;
+    			cursor: pointer;
+    			border-radius: 8px;
+
+    		}
+
+    		.button1:hover {
+
+    			background-color: black;
+    			border: 2px solid white;
+    		}
+
+
+}
+		</style>
+
+		<!-- Adding Metadata -->
+		<meta charset="utf-8"; name="viewport" description="A crappy website for nobody">
+
+
+	</head>
+
+	<body>
+
+		<!-- Changing the font for the header -->
+		<span style="font-family: Times New Roman, Times, serif">
+		<h1>testsite</h1>
+
+		<h3>Don't blame it on the boogie</h3>
+		</span>
+
+		<!-- paragraph tag with content -->
+		<p id = "paragraph">"Lorizzle ipsum bling bling sit amizzle, consectetuer adipiscing elit. Nizzle sapien velizzle, bling bling volutpat, suscipit , gravida vel, arcu. Check it out hizzle that's the shizzle. We gonna chung erizzle. Fo izzle dolor fo turpis tempizzle tempor. Gangsta boom shackalack mofo et turpizzle. Sizzle izzle tortor. Pellentesque uhuh ... yih!"</p> <br>
+
+
+		<!-- Link to downloadmoreram.com as an image -->
+		<a href="http://www.downloadmoreram.com/"> <img src="ram.jpg" id="ram" style="width:100px;height:100px";> </a> <br>
+
+		<!-- Link to the Sweet Prince wikipedia page  -->
+		<a href="https://goo.gl/41Vn5C" >The Sweet Prince</a>
+
+
+		<!-- Using a form for input-->
+		<form id="userIn" method="get" onsubmit="formHandler()">
+			Type Something: <input type="text" name="Test" > <input type="submit" name="Test">
+
+		</form> <br>
+
+
+		<!-- This is a table with 1 row and 1 column -->
+		<table>
+			<tr>
+				<th>First</th>
+				<th>Second</th>
+			</tr>
+			<tr>
+				<td>TD</td>
+				<td>TD</td>
+			</tr>
+			<tr>
+				<td>
+					HEY
+				</td>
+				<td>
+					TEST
+				</td>
+			</tr>
+
+		</table> 
+
+		<br>
+
+		<img src="record.png" id="record" style="width: 200px;height: 200px";>
+
+		<!-- Header 3 -->
+		<h3>Buttons</h3>
+
+		<!-- Button which runs addCat()-->
+		<button type = "button" class="button button1" onclick="addCat()"; >Cat</button>
+		<button type = "button" class="button button1" onclick="addRick()"; >Rick</button>
+		<button type = "button" class="button button1" onclick="removeItem()">Remove</button>
+		<button type = "button" class="button button1" onclick="spam()">Spam</button>
+
+
+
+		<!--Div tag to put images in -->
+		<div id="newImg"></div>
+
+
+
+	</body>
+
+
+	<!-- Starting Script Tag for Javascript -->
+	<script type="text/javascript">
+
+		var num = 5;
+		var userInput = document.getElementById("userIn");
+		//var music = new Audio('music.wav');
+
+		document.getElementById("record").onmousover = function() {playMusic()};
+		document.getElementById("record").onmouseout = function() {pauseMusic()};
+
+
+
+		//addCat Function adds Yusuf inside div tag on call
+		function addCat() {
+
+			//Creating and setting defaults for Image
+			var elem = document.createElement("img");
+			elem.src = "cat.png"
+			elem.setAttribute("height", "100");
+			elem.setAttribute("width", "100");
+			elem.setAttribute("alt", "Yusuf");
+			elem.setAttribute("id", "img")
+			document.getElementById("newImg").appendChild(elem);
+		}
+
+
+		// add Rick adds Ricky image inside div tag on call
+		function addRick() {
+
+			//Creating and setting defaults for Image
+			var elem = document.createElement("img");
+			elem.src = "Ricky.png"
+			elem.setAttribute("height", "100");
+			elem.setAttribute("width", "100");
+			elem.setAttribute("alt", "Rick");
+			elem.setAttribute("id", "img")
+			document.getElementById("newImg").appendChild(elem);
+
+		}
+
+		function removeItem() {
+
+			var parent = document.getElementById("newImg");
+			var child = document.getElementById("img")
+			parent.removeChild(child)
+
+
+		}
+
+		function spam(){
+			for(i = 0; i < 200; i++){
+				addCat();
+			}
+		}
+
+		function playMusic(){
+			console.log("playing");
+		}
+
+		function pauseMusic(){
+			console.log("paused");
+		}
+
+
+		function formHandler(userIn) {
+
+			console.log(userIn);
+
+		}
+
+
+		
+
+	</script>
+</html>

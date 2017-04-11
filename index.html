@@ -131,7 +131,6 @@
 
 
 	</head>
-
 	<body>
 
 		<!-- Changing the font for the header -->
@@ -179,7 +178,6 @@
 			</tr>
 
 		</table> 
-
 		<br>
 
 		<img src="record.png" id="record" style="width: 200px;height: 200px";>
@@ -250,11 +248,10 @@
 			var child = document.getElementById("img")
 			parent.removeChild(child)
 
-
 		}
 
 		function removeAll() {
-			while(newImg.contains("img")){
+			while(newImg.contains(document.getElementById("img"))){
 				var parent = document.getElementById("newImg");
 				var child = document.getElementById("img")
 				parent.removeChild(child)

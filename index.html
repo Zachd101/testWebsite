@@ -91,7 +91,7 @@
 
 			table, th, td {
 
-				border: 1px solid black;
+				border: 10px solid black;
 				border-collapse: collapse;
 
 			}
@@ -123,7 +123,7 @@
     		}
 
 
-}
+
 		</style>
 
 		<!-- Adding Metadata -->
@@ -151,29 +151,32 @@
 		<a href="https://goo.gl/41Vn5C" >The Sweet Prince</a>
 
 
-		<!-- Using a form for input-->
+		<!-- Using a form for input (wip) -->
 		<form id="userIn" method="get" onsubmit="formHandler()">
 			Type Something: <input type="text" name="Test" > <input type="submit" name="Test">
 
 		</form> <br>
 
+		<button type = "button" class="button button1" onclick="promptClicked()"; >Prompt</button> <br>
+
+		<p id = "promptReturn"></p>
 
 		<!-- This is a table with 1 row and 1 column -->
 		<table>
 			<tr>
-				<th>First</th>
-				<th>Second</th>
+				<th>Look</th>
+				<th>At</th>
 			</tr>
 			<tr>
-				<td>TD</td>
-				<td>TD</td>
+				<td>These</td>
+				<td>Bor</td>
 			</tr>
 			<tr>
 				<td>
-					HEY
+					Ders
 				</td>
 				<td>
-					TEST
+					Buddy
 				</td>
 			</tr>
 
@@ -185,7 +188,7 @@
 		<!-- Header 3 -->
 		<h3>Buttons</h3>
 
-		<!-- Button which runs addCat()-->
+		<!-- Button which change the new Img div tag-->
 		<button type = "button" class="button button1" onclick="addCat()"; >Cat</button>
 		<button type = "button" class="button button1" onclick="addRick()"; >Rick</button>
 		<button type = "button" class="button button1" onclick="removeItem()">Remove</button>
@@ -272,6 +275,17 @@
 			//uses Html audio tag in javascript
 			music.pause();
 			console.log("paused");
+		}
+
+		//prompt 
+		function promptClicked(){
+			var input = prompt("Say Something", "something");
+			if(input != null){
+				document.getElementById("promptReturn").innerHTML = input;
+			} else {
+				document.getElementById("promptReturn").innerHTML = "This pretentious ponderous collection of religious rock psalms is enough to prompt the question, 'What day did the Lord create Spinal Tap, and couldn't he have rested on that day too?'";
+			}
+
 		}
 
 		//wip form handler function

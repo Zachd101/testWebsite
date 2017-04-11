@@ -9,7 +9,7 @@
 
 		<!-- Defining Colors and Fonts for Body using CSS-->
 		<style type="text/css">
-
+		
 
 			@keyframes bg {
 
@@ -46,7 +46,7 @@
 				color: black;
 				background-color: lightblue;
 				animation-name: bg;
-				animation-duration: 4s;
+				animation-duration: 10s;
 				animation-iteration-count: infinite;
 				animation-timing-function: linear;
 				font-weight: normal;
@@ -206,7 +206,7 @@
 	<script type="text/javascript">
 
 		var num = 5;
-		var userInput = document.getElementById("userIn");
+		// Html 5 audio tag in js
 		var music = new Audio('music.mp3');
 
 
@@ -238,6 +238,7 @@
 
 		}
 
+		//Removes one image from the div tag
 		function removeItem() {
 
 			var parent = document.getElementById("newImg");
@@ -246,33 +247,36 @@
 
 		}
 
+		//removes all images from the div tag
 		function removeAll() {
 			while(newImg.contains(document.getElementById("img"))){
-				var parent = document.getElementById("newImg");
-				var child = document.getElementById("img")
-				parent.removeChild(child)
+				removeItem();
 			}
 		}
 
+		//adds 200 images inside the div tag
 		function spam(){
 			for(i = 0; i < 200; i++){
 				addCat();
 			}
 		}
 
+		//plays music
 		function playMusic(){
 			music.play();
 			console.log("playing");
 		}
 
+		//pauses music
 		function pauseMusic(){
+			//uses Html audio tag in javascript
 			music.pause();
 			console.log("paused");
 		}
 
-
+		//wip form handler function
 		function formHandler(userIn) {
-
+			var userInput = document.getElementById("userIn");
 			console.log(userIn);
 
 		}

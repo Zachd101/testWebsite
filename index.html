@@ -46,7 +46,7 @@
 				color: black;
 				background-color: lightblue;
 				animation-name: bg;
-				animation-duration: 16s;
+				animation-duration: 4s;
 				animation-iteration-count: infinite;
 				animation-timing-function: linear;
 				font-weight: normal;
@@ -192,6 +192,7 @@
 		<button type = "button" class="button button1" onclick="addRick()"; >Rick</button>
 		<button type = "button" class="button button1" onclick="removeItem()">Remove</button>
 		<button type = "button" class="button button1" onclick="spam()">Spam</button>
+		<button type = "button" class="button button1" onclick="removeAll()">Remove All</button>
 
 
 
@@ -250,6 +251,14 @@
 			parent.removeChild(child)
 
 
+		}
+
+		function removeAll() {
+			while(newImg.contains("img")){
+				var parent = document.getElementById("newImg");
+				var child = document.getElementById("img")
+				parent.removeChild(child)
+			}
 		}
 
 		function spam(){

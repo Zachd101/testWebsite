@@ -180,7 +180,7 @@
 		</table> 
 		<br>
 
-		<img src="record.png" id="record" style="width: 200px;height: 200px";>
+		<img src="record.png" id="record" style="width: 200px;he ight: 200px" onmouseenter="playMusic()" onmouseleave="pauseMusic()" ;>
 
 		<!-- Header 3 -->
 		<h3>Buttons</h3>
@@ -207,11 +207,7 @@
 
 		var num = 5;
 		var userInput = document.getElementById("userIn");
-		//var music = new Audio('music.wav');
-
-		document.getElementById("record").onmousover = function() {playMusic()};
-		document.getElementById("record").onmouseout = function() {pauseMusic()};
-
+		var music = new Audio('music.mp3');
 
 
 		//addCat Function adds Yusuf inside div tag on call
@@ -265,10 +261,12 @@
 		}
 
 		function playMusic(){
+			music.play();
 			console.log("playing");
 		}
 
 		function pauseMusic(){
+			music.pause();
 			console.log("paused");
 		}
 

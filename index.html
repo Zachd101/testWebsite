@@ -14,6 +14,13 @@ published on https://zachd101.github.io/testWebsite/
 
 		<!-- Defining Colors and Fonts for Body using CSS-->
 		<style type="text/css">
+
+
+			@font-face {
+
+				font-family: ComicTragedy-BC; 
+				src : url(ComicTragedy-BC.ttf) format('truetype');
+			}
 		
 
 			@keyframes bg {
@@ -28,13 +35,14 @@ published on https://zachd101.github.io/testWebsite/
 			@keyframes rotate {
 
 				0% {	-ms-transform: rotate(0deg); /* IE 9 */ -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */ transform: rotate(0deg);}
+				0%   {	-ms-transform: rotate(0deg); /* IE 9 */ -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */ transform: rotate(0deg);}
 				100% {	-ms-transform: rotate(360deg); /* IE 9 */ -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */ transform: rotate(360deg);}
 			}
 
 			@keyframes move {
 
-				0% {-ms-transform: translate(0vw, 0vw); /* IE 9 */ -webkit-transform: translate(0px, 0px); /* Safari */ transform: translate(0px, 0px);}
-				50% {-ms-transform: translate(50vw, 50vw); /* IE 9 */ -webkit-transform: translate(50px, 50px); /* Safari */ transform: translate(50px, 50px);}
+				0%   {-ms-transform: translate(0vw, 0vw); /* IE 9 */ -webkit-transform: translate(0px, 0px); /* Safari */ transform: translate(0px, 0px);}
+				50%  {-ms-transform: translate(50vw, 50vw); /* IE 9 */ -webkit-transform: translate(50px, 50px); /* Safari */ transform: translate(50px, 50px);}
 				100% {-ms-transform: translate(0vw, 0vw); /* IE 9 */ -webkit-transform: translate(0px, 0px); /* Safari */ transform: translate(0px, 0px);}
 
 			}
@@ -46,6 +54,8 @@ published on https://zachd101.github.io/testWebsite/
 
 			}
 
+
+
 			body {
 
 				color: black;
@@ -54,14 +64,20 @@ published on https://zachd101.github.io/testWebsite/
 				animation-duration: 10s;
 				animation-iteration-count: infinite;
 				animation-timing-function: linear;
-				font-weight: normal;
-				font-family: Tahoma, Geneva, sans-serif;
+				
 				-webkit-transition-duration: 0.4s; /* Safari */
    				transition-duration: 0.4s;
 
 			}
-			p {
 
+			h1 {
+				font-family: ComicTragedy-BC;
+				font-weight: normal;
+			}
+
+			p {
+				font-weight: normal;
+				font-family: Tahoma, Geneva, sans-serif; 
 				word-spacing: 10px;
 				color: black;
 

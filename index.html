@@ -5,6 +5,12 @@ Apr 11, 2017
 published on https://zachd101.github.io/testWebsite/  
 -->
 
+	<!-- Starting Head tag-->
+	<head>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<script src="https://use.fontawesome.com/82f4731082.js"></script>
 
 	<!-- Defining Colors and Fonts for Body using CSS-->
 	<style type="text/css">
@@ -14,7 +20,6 @@ published on https://zachd101.github.io/testWebsite/
 			font-family: ComicTragedy-BC; 
 			src : url(ComicTragedy-BC.ttf) format('truetype');
 		}
-		
 
 		@keyframes bg {
 
@@ -120,13 +125,12 @@ published on https://zachd101.github.io/testWebsite/
 
 	</style>
 
-	<!-- Starting Head tag-->
-	<head>
+	
 
 		<!-- Title tag -->
 		<title>∑∑∑∑∑∑</title>
 
-		
+
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
 		<!-- Adding Metadata -->
@@ -159,7 +163,9 @@ published on https://zachd101.github.io/testWebsite/
 
 		</form> <br>
 
-		<button type = "button" class="button button1" onclick="promptClicked()" autofocus="true" ; >Prompt</button> <br>
+		<button type = "button" class="button button1" onclick="promptClicked()" autofocus="true" ; >Prompt</button>
+		<button type = "button" class="button button1" onclick="alertSpam()"; >AlertSpam</button>
+		<br>
 
 		<p id = "promptReturn"></p>
 
@@ -272,6 +278,12 @@ published on https://zachd101.github.io/testWebsite/
 				document.getElementById("promptReturn").innerHTML = input;
 			} else {
 				document.getElementById("promptReturn").innerHTML = "This pretentious ponderous collection of religious rock psalms is enough to prompt the question, 'What day did the Lord create Spinal Tap, and couldn't he have rested on that day too?'";
+			}
+		}
+
+		function alertSpam(){
+			for(i = 0; i < 30; i++){
+				window.alert("cem's beard suks")
 			}
 		}
 
